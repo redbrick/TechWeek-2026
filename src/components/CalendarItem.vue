@@ -1,10 +1,12 @@
 <template>
-  <section class="bg-white dark:bg-gray-900 antialiased">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-      <div class="max-w-3xl mx-auto text-center">
+  <section
+    class="bg-white dark:bg-gray-900 antialiased border-s border-gray-200 dark:border-gray-700"
+  >
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6">
+      <div class="max-w-3xl mx-auto">
         <button
           @click="open = !open"
-          class="flex items-center justify-center w-full text-4xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white focus:outline-none"
+          class="flex cursor-pointer items-center w-full text-4xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white focus:outline-none"
         >
           <svg
             :class="{ 'rotate-180': open, 'rotate-0': !open }"
@@ -23,8 +25,11 @@
           {{ title }}
         </button>
       </div>
-      <transition name="fade">
-        <div v-show="open">
+      <transition name="expand-fade">
+        <div
+          v-show="open"
+          class="overflow-hidden inset-shadow-sm rounded-lg bg-white dark:bg-gray-800"
+        >
           <slot></slot>
         </div>
       </transition>
@@ -44,17 +49,20 @@ export default {
 </script>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
+.expand-fade-enter-active,
+.expand-fade-leave-active {
+  transition:
+    max-height 0.7s linear,
+    opacity 0.3s linear;
 }
-.fade-enter-from,
-.fade-leave-to {
+.expand-fade-enter-from,
+.expand-fade-leave-to {
+  max-height: 0;
   opacity: 0;
 }
-.fade-enter-to,
-.fade-leave-from {
+.expand-fade-enter-to,
+.expand-fade-leave-from {
+  max-height: 1000px; /* Adjust as needed for your content */
   opacity: 1;
 }
-/* ...existing styles... */
 </style>

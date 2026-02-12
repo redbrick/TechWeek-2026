@@ -10,7 +10,7 @@ import YoutubeEmbed from './components/YoutubeEmbed.vue'
     <YoutubeEmbed urlID="tipxfFOPdDo?si=fAco-y9XacPtvruK" />
   </header>
 
-  <main>
+  <main class="flex flex-col justify-center gap-5">
     <CalendarMain />
   </main>
 </template>
