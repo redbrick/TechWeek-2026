@@ -1,5 +1,3 @@
-<!-- Get argument from url -->
-
 <template>
   <div>
     <iframe

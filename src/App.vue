@@ -1,5 +1,5 @@
 <script setup>
-import TheWelcome from './components/TheWelcome.vue'
+import CalendarMain from './components/CalendarMain.vue'
 import TitleBlock from './components/TitleBlock.vue'
 import YoutubeEmbed from './components/YoutubeEmbed.vue'
 </script>
@@ -11,7 +11,7 @@ import YoutubeEmbed from './components/YoutubeEmbed.vue'
   </header>
 
   <main>
-    <TheWelcome />
+    <CalendarMain />
   </main>
 </template>
 
