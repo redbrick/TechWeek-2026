@@ -1,4 +1,3 @@
-
 <script setup>
 import EventItem from './EventItem.vue'
 import { ref } from 'vue'
@@ -12,9 +11,9 @@ const tabs = [
         time: '15:00',
         heading: 'Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
-      }
-    ]
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
+      },
+    ],
   },
   {
     label: 'Thursday-15th | Security',
@@ -23,40 +22,40 @@ const tabs = [
         time: '15:00',
         heading: '1Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
         time: '15:00',
         heading: '1Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
         time: '15:00',
         heading: '1Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
         time: '15:00',
         heading: '1Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
         time: '15:00',
         heading: '1Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
         time: '15:00',
         heading: '1Documentation',
         location: 'LG26',
-        description: `Vue’s\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\">official documentation</a>\nprovides you with all information you need to get started.`
-      }
-    ]
-  }
+        description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
+      },
+    ],
+  },
 ]
 
 const selectedTab = ref(0)
@@ -65,7 +64,7 @@ const selectedTab = ref(0)
 <template>
   <div class="w-full max-w-3xl mx-auto">
     <!-- Tab Navigation -->
-    <div class="flex border-b border-gray-200 dark:border-gray-700 mb-4">
+    <div class="flex border-b border-gray-200 dark:border-gray-700 mb-4 justify-center">
       <button
         v-for="(tab, idx) in tabs"
         :key="tab.label"
@@ -74,7 +73,7 @@ const selectedTab = ref(0)
           'py-2 px-4 -mb-px font-semibold focus:outline-none',
           selectedTab === idx
             ? 'border-b-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400'
-            : 'text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400'
+            : 'text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400',
         ]"
         type="button"
       >
@@ -99,12 +98,14 @@ const selectedTab = ref(0)
       </div>
     </transition>
   </div>
-  </template>
+</template>
 
 <style scoped>
 .list-fade-enter-active,
 .list-fade-leave-active {
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-fade-enter-from {
   opacity: 0;
