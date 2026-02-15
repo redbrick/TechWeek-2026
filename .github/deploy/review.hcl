@@ -37,7 +37,7 @@ job "techweek-review-[[.environment_slug]]" {
       driver = "docker"
 
       config {
-        image      = "ghcr.io/redbrick/techweek:sha-[[.git_sha]]"
+        image      = "ghcr.io/redbrick/TechWeek-2026:sha-[[.git_sha]]"
         ports      = ["http"]
         force_pull = true
       }

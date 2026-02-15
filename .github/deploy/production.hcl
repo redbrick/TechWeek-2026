@@ -37,7 +37,7 @@ job "techweek" {
       driver = "docker"
 
       config {
-        image      = "ghcr.io/redbrick/techweek:latest"
+        image      = "ghcr.io/redbrick/TechWeek-2026:latest"
         ports      = ["http"]
         force_pull = true
       }
