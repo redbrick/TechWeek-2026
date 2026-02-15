@@ -79,7 +79,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - run: nomad status -address=http://nomad.service.consul:4646
-      - run: nomad job stop -address=http://nomad.service.consul:4646 -purge atlas-review-${GITHUB_HEAD_REF}
+      - run: nomad job stop -address=http://nomad.service.consul:4646 -purge techweek-review-${GITHUB_HEAD_REF}
 
   deploy_prod:
     needs:
