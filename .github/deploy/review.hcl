@@ -27,7 +27,7 @@ job "techweek-review-[[.environment_slug]]" {
 
       tags = [
         "traefik.enable=true",
-        "traefik.http.routers.techweek-[[.environment_slug]].rule=Host(`review-[[.environment_slug]].redbrick.dcu.ie`)",
+        "traefik.http.routers.techweek-[[.environment_slug]].rule=Host(`techweek-review-[[.environment_slug]].redbrick.dcu.ie`)",
         "traefik.http.routers.techweek-[[.environment_slug]].entrypoints=web,websecure",
         "traefik.http.routers.techweek-[[.environment_slug]].tls.certresolver=rb",
       ]
