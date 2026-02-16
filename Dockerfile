@@ -4,12 +4,12 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-ENV NODE_ENV=production
-ENV VITE_DEV=false
-
 RUN npm ci
 
 COPY . .
+
+ARG VITE_DEV=false
+ENV VITE_DEV=$VITE_DEV
 
 RUN npm run build
 
