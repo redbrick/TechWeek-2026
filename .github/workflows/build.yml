@@ -6,6 +6,11 @@ env:
 
 on:
   workflow_call:
+    inputs:
+      vite_dev:
+        required: false
+        type: string
+        default: "false"
 
 jobs:
   build:
@@ -40,3 +45,5 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            VITE_DEV=${{ inputs.vite_dev }}
