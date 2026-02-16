@@ -8,7 +8,7 @@ RUN npm ci
 
 COPY . .
 
-ARG VITE_DEV=false
+ARG VITE_DEV=true
 ENV VITE_DEV=$VITE_DEV
 
 RUN npm run build
