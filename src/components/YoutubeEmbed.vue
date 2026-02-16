@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  props: ['urlID'],
+  props: ["urlID"],
 }
 </script>

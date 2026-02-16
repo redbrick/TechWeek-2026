@@ -8,9 +8,9 @@ on:
 jobs:
   build:
     name: build
-    uses: './.github/workflows/build.yml'
+    uses: "./.github/workflows/build.yml"
     with:
-      vite_dev: 'false'
+      vite_dev: "false"
     if: github.event_name != 'pull_request'
 
   deploy_review:

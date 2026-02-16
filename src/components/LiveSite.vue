@@ -1,7 +1,7 @@
 <script setup>
-import CalendarMain from './CalendarMain.vue'
-import TitleBlock from './TitleBlock.vue'
-import YoutubeEmbed from './YoutubeEmbed.vue'
+import CalendarMain from "./CalendarMain.vue"
+import TitleBlock from "./TitleBlock.vue"
+import YoutubeEmbed from "./YoutubeEmbed.vue"
 </script>
 
 <template>

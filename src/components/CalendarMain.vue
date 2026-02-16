@@ -1,57 +1,57 @@
 <script setup>
-import EventItem from './EventItem.vue'
-import { ref } from 'vue'
+import EventItem from "./EventItem.vue"
+import { ref } from "vue"
 
 // Example data structure for events grouped by date/location
 const tabs = [
   {
-    label: 'Wednesday-15th | Security',
+    label: "Wednesday-15th | Security",
     events: [
       {
-        time: '15:00',
-        heading: 'Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
     ],
   },
   {
-    label: 'Thursday-15th | Security',
+    label: "Thursday-15th | Security",
     events: [
       {
-        time: '15:00',
-        heading: '1Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "1Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
-        time: '15:00',
-        heading: '1Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "1Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
-        time: '15:00',
-        heading: '1Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "1Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
-        time: '15:00',
-        heading: '1Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "1Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
-        time: '15:00',
-        heading: '1Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "1Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
       {
-        time: '15:00',
-        heading: '1Documentation',
-        location: 'LG26',
+        time: "15:00",
+        heading: "1Documentation",
+        location: "LG26",
         description: `Vue’s\n<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>\nprovides you with all information you need to get started.`,
       },
     ],
