@@ -10,7 +10,7 @@ on:
       vite_dev:
         required: false
         type: string
-        default: "false"
+        default: 'false'
 
 jobs:
   build:
