@@ -10,7 +10,7 @@ jobs:
     name: build
     uses: "./.github/workflows/build.yml"
     with:
-      vite_dev: "true"
+      vite_dev: ${{ github.ref != 'refs/heads/main' && github.event_name == 'push' && 'false' || 'true' }}
     if: github.event_name != 'pull_request'
 
   deploy_review:
