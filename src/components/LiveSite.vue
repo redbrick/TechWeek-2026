@@ -2,7 +2,8 @@
 import CalendarMain from "./CalendarMain.vue"
 import TitleBlock from "./TitleBlock.vue"
 import YoutubeEmbed from "./YoutubeEmbed.vue"
-import { ref, computed, watchEffect, defineExpose } from "vue"
+import ThemeToggle from "./ThemeToggle.vue"
+import { ref, computed, watchEffect } from "vue"
 
 const year = computed(() => {
   const path = window.location.pathname
@@ -49,6 +50,7 @@ defineExpose({ data, calendarTabs, subtitle })
 <template>
   <div class="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
     <header class="w-full">
+      <ThemeToggle class="float-right" />
       <TitleBlock :title="'Tech Week'" :subtitle="subtitle" />
     </header>
 

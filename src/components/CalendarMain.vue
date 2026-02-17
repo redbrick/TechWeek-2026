@@ -38,7 +38,7 @@ const selectedTab = ref(0)
     <transition name="list-fade" mode="out-in" appear>
       <div :key="selectedTab" class="space-y-4">
         <div
-          v-for="event in props.tabs[selectedTab].events"
+          v-for="event in props.tabs[selectedTab]?.events || []"
           :key="event.heading + event.time + event.location"
         >
           <EventItem>
