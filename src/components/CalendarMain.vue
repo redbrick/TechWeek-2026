@@ -17,7 +17,7 @@ const selectedTab = ref(0)
   <div class="w-full max-w-3xl mx-auto">
     <!-- Tab Navigation -->
     <div class="px-2">
-      <div class="flex flex-col md:flex-row gap-2 justify-center">
+      <div class="flex flex-col md:flex-row gap-2 justify-center mb-5 sm:mb-0">
         <button
           v-for="(tab, idx) in props.tabs"
           :key="tab.label"

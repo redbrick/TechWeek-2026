@@ -1,7 +1,10 @@
 <template>
   <div>
     <TransitionRoot as="template" :show="open">
-      <Dialog class="fixed inset-0 z-60 flex items-center justify-center" @close="emit('close')">
+      <Dialog
+        class="fixed inset-0 z-60 flex items-center justify-center overflow-y-auto"
+        @close="emit('close')"
+      >
         <TransitionChild
           as="template"
           enter="ease-in-out duration-500"
@@ -24,11 +27,11 @@
           leave-to="-translate-y-full opacity-0"
         >
           <DialogPanel
-            class="relative w-full max-w-md bg-gray-800 rounded-xl shadow-xl flex flex-col"
+            class="relative w-full max-w-md max-h-[90vh] bg-gray-800 rounded-xl shadow-xl flex flex-col overflow-y-auto"
           >
             <button
               type="button"
-              class="absolute top-4 right-4 rounded-md text-gray-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              class="absolute top-4 right-4 rounded-md text-gray-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 cursor-pointer"
               @click="emit('close')"
             >
               <span class="sr-only">Close panel</span>
