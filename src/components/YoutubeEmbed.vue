@@ -2,7 +2,7 @@
   <div>
     <iframe
       v-if="urlID"
-      class="w-100 h-80"
+      class="aspect-video w-full rounded-lg"
       :src="`https://www.youtube.com/embed/${urlID}`"
       title="YouTube video player"
       frameborder="0"
@@ -24,6 +24,6 @@
 
 <script>
 export default {
-  props: ['urlID'],
+  props: ["urlID"],
 }
 </script>
