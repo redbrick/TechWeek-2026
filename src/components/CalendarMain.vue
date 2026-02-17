@@ -41,7 +41,7 @@ const selectedTab = ref(0)
           v-for="event in props.tabs[selectedTab]?.events || []"
           :key="event.heading + event.time + event.location"
         >
-          <EventItem>
+          <EventItem :event="event">
             <template #time>{{ event.time }}</template>
             <template #heading>{{ event.heading }}</template>
             <template #location>{{ event.location }}</template>

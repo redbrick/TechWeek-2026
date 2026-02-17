@@ -1,85 +1,69 @@
 <template>
   <div>
-    <button
-      class="rounded-md bg-black/10 px-2.5 py-1.5 text-sm font-semibold text-white inset-ring inset-ring-white/5 hover:bg-white/20"
-      @click="open = true"
-    >
-      Open drawer
-    </button>
     <TransitionRoot as="template" :show="open">
-      <Dialog class="relative z-10" @close="open = false">
+      <Dialog class="fixed inset-0 z-60 flex items-center justify-center" @close="emit('close')">
         <TransitionChild
           as="template"
           enter="ease-in-out duration-500"
           enter-from="opacity-0"
-          enter-to=""
+          enter-to="opacity-100"
           leave="ease-in-out duration-500"
-          leave-from=""
+          leave-from="opacity-100"
           leave-to="opacity-0"
         >
           <div class="fixed inset-0 bg-gray-900/50 transition-opacity"></div>
         </TransitionChild>
 
-        <div class="fixed inset-0 overflow-hidden">
-          <div class="absolute inset-0 overflow-hidden">
-            <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16">
-              <TransitionChild
-                as="template"
-                enter="transform transition ease-in-out duration-500 sm:duration-700"
-                enter-from="translate-x-full"
-                enter-to="translate-x-0"
-                leave="transform transition ease-in-out duration-500 sm:duration-700"
-                leave-from="translate-x-0"
-                leave-to="translate-x-full"
-              >
-                <DialogPanel class="pointer-events-auto relative w-screen max-w-md">
-                  <TransitionChild
-                    as="template"
-                    enter="ease-in-out duration-500"
-                    enter-from="opacity-0"
-                    enter-to=""
-                    leave="ease-in-out duration-500"
-                    leave-from=""
-                    leave-to="opacity-0"
-                  >
-                    <div class="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 sm:-ml-10 sm:pr-4">
-                      <button
-                        type="button"
-                        class="relative rounded-md text-gray-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                        @click="open = false"
-                      >
-                        <span class="absolute -inset-2.5"></span>
-                        <span class="sr-only">Close panel</span>
-                        <XMarkIcon class="size-6" aria-hidden="true" />
-                      </button>
-                    </div>
-                  </TransitionChild>
-                  <div
-                    class="relative flex h-full flex-col overflow-y-auto bg-gray-800 py-6 shadow-xl after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-white/10"
-                  >
-                    <div class="px-4 sm:px-6">
-                      <DialogTitle class="text-base font-semibold text-white"
-                        >Panel title</DialogTitle
-                      >
-                    </div>
-                    <div class="relative mt-6 flex-1 px-4 sm:px-6">
-                      <!-- Your content -->
-                    </div>
-                  </div>
-                </DialogPanel>
-              </TransitionChild>
+        <TransitionChild
+          as="template"
+          enter="transform transition ease-in-out duration-500"
+          enter-from="translate-y-full opacity-0"
+          enter-to="translate-y-0 opacity-100"
+          leave="transform transition ease-in-out duration-500"
+          leave-from="translate-y-0 opacity-100"
+          leave-to="-translate-y-full opacity-0"
+        >
+          <DialogPanel
+            class="relative w-full max-w-md bg-gray-800 rounded-xl shadow-xl flex flex-col"
+          >
+            <button
+              type="button"
+              class="absolute top-4 right-4 rounded-md text-gray-400 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+              @click="emit('close')"
+            >
+              <span class="sr-only">Close panel</span>
+              <XMarkIcon class="size-6" aria-hidden="true" />
+            </button>
+            <div class="px-6 pt-6 pb-4">
+              <DialogTitle class="text-base font-semibold text-white">{{
+                event.heading
+              }}</DialogTitle>
             </div>
-          </div>
-        </div>
+            <div class="relative flex-1 px-6 pb-6">
+              <!-- Show any json field and value in event -->
+              <div v-for="(value, key) in event" :key="key" class="mb-4">
+                <h3 class="text-sm font-medium text-gray-400">{{ key }}</h3>
+                <p class="mt-1 text-sm text-gray-200">{{ value }}</p>
+              </div>
+            </div>
+          </DialogPanel>
+        </TransitionChild>
       </Dialog>
     </TransitionRoot>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue"
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from "@headlessui/vue"
 import { XMarkIcon } from "@heroicons/vue/24/outline"
+import { defineProps, defineEmits } from "vue"
 
-const open = ref(true)
+defineProps({
+  open: Boolean,
+  event: {
+    type: Array,
+    required: true,
+  },
+})
+const emit = defineEmits(["close"])
 </script>
