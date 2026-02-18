@@ -1,8 +1,8 @@
 <script setup>
-import CalendarMain from "./CalendarMain.vue"
-import TitleBlock from "./TitleBlock.vue"
-import YoutubeEmbed from "./YoutubeEmbed.vue"
-import ThemeToggle from "./ThemeToggle.vue"
+import CalendarMain from "../components/CalendarMain.vue"
+import TitleBlock from "../components/TitleBlock.vue"
+import YoutubeEmbed from "../components/YoutubeEmbed.vue"
+import ThemeToggle from "../components/ThemeToggle.vue"
 import { ref, computed, watchEffect } from "vue"
 
 const year = computed(() => {
