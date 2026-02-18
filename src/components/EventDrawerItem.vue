@@ -37,16 +37,15 @@
               <span class="sr-only">Close panel</span>
               <XMarkIcon class="size-6" aria-hidden="true" />
             </button>
-            <div class="px-6 pt-6 pb-4">
+            <div class="px-6 pt-10 pb-4">
               <DialogTitle class="text-base font-semibold text-white">{{
                 event.heading
               }}</DialogTitle>
             </div>
             <div class="relative flex-1 px-6 pb-6">
-              <!-- Show any json field and value in event -->
-              <div v-for="(value, key) in event" :key="key" class="mb-4">
-                <h3 class="text-sm font-medium text-gray-400">{{ key }}</h3>
-                <p class="mt-1 text-sm text-gray-200">{{ value }}</p>
+              <div v-for="field in eventFields" :key="field.key" class="mb-4">
+                <h3 class="text-sm font-medium text-gray-400">{{ field.label }}</h3>
+                <p class="mt-1 text-sm text-gray-200">{{ event[field.key] }}</p>
               </div>
             </div>
           </DialogPanel>
@@ -59,7 +58,7 @@
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from "@headlessui/vue"
 import { XMarkIcon } from "@heroicons/vue/24/outline"
-import { defineProps, defineEmits } from "vue"
+import { defineProps, defineEmits, computed } from "vue"
 
 defineProps({
   open: Boolean,
@@ -69,4 +68,10 @@ defineProps({
   },
 })
 const emit = defineEmits(["close"])
+const eventFields = computed(() => [
+  { key: "by", label: "By" },
+  { key: "time", label: "Time" },
+  { key: "location", label: "Location" },
+  { key: "description", label: "Description" },
+])
 </script>

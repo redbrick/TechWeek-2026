@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue"
-import DrawerItem from "./DrawerItem.vue"
+import EventDrawerItem from "./EventDrawerItem.vue"
 
 const drawerOpen = ref(false)
 
@@ -38,6 +38,6 @@ defineProps({
         </p>
       </div>
     </div>
-    <DrawerItem :event="event" :open="drawerOpen" @close="closeDrawer" />
+    <EventDrawerItem :event="event" :open="drawerOpen" @close="closeDrawer" />
   </div>
 </template>
