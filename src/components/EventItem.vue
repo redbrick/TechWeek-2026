@@ -29,7 +29,7 @@ defineProps({
           <slot name="time"></slot>
         </p>
         <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white flex-1 min-w-0">
-          <a href="#" class="hover:underline break-words" @click.prevent="openDrawer">
+          <a href="#" class="hover:underline wrap-break-word" @click.prevent="openDrawer">
             <slot name="heading"></slot>
           </a>
         </h3>

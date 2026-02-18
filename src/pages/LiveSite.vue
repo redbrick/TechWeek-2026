@@ -3,11 +3,18 @@ import CalendarMain from "../components/CalendarMain.vue"
 import TitleBlock from "../components/TitleBlock.vue"
 import YoutubeEmbed from "../components/YoutubeEmbed.vue"
 import ThemeToggle from "../components/ThemeToggle.vue"
-import { ref, computed, watchEffect } from "vue"
+import FooterRedbrick from "../components/FooterRedbrick.vue"
 
+import { ref, computed, watchEffect } from "vue"
+import { useRoute } from "vue-router"
+
+const route = useRoute()
 const year = computed(() => {
-  const path = window.location.pathname
-  const match = path.match(/\/(\d{4})/)
+  // Try to get year param from route, fallback to path, then default
+  if (route.params.year && /^\d{4}$/.test(route.params.year)) {
+    return route.params.year
+  }
+  const match = route.path.match(/\/(\d{4})/)
   return match ? match[1] : "2026"
 })
 
@@ -64,4 +71,5 @@ defineExpose({ data, calendarTabs, subtitle })
       </section>
     </main>
   </div>
+  <FooterRedbrick />
 </template>
