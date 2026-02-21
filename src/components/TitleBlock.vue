@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps } from "vue"
 import { useRouter, useRoute } from "vue-router"
 
 // Dynamically get years from data folder using Vite's import.meta.glob

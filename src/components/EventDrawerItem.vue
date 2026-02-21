@@ -58,7 +58,7 @@
 <script setup>
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from "@headlessui/vue"
 import { XMarkIcon } from "@heroicons/vue/24/outline"
-import { defineProps, defineEmits, computed } from "vue"
+import { computed } from "vue"
 
 defineProps({
   open: Boolean,

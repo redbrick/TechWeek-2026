@@ -1,7 +1,6 @@
 <script setup>
 import EventItem from "./EventItem.vue"
 import { ref } from "vue"
-import { defineProps } from "vue"
 
 const props = defineProps({
   tabs: {
