@@ -3,8 +3,8 @@
     <div class="max-w-4xl mx-auto p-6">
       <h1 class="text-2xl font-bold mb-4">Event JSON Editor</h1>
       <div class="mb-4 flex flex-wrap gap-2 items-center">
-        <label class="font-semibold">Select year:</label>
-        <select v-model="selectedFile" @change="loadJson" class="border rounded px-2 py-1">
+        <span class="font-semibold">Select year:</span>
+        <select v-model="selectedFile" @change="loadJson" class="border rounded px-2 py-1 bg-gray-900">
           <option v-for="file in jsonFiles" :key="file" :value="file">{{ file }}</option>
         </select>
         <button
@@ -13,6 +13,10 @@
         >
           New JSON
         </button>
+        <label class="ml-2 px-3 py-1 bg-gray-700 text-white rounded cursor-pointer">
+          <span id="jsonFile">Upload JSON</span>
+          <input type="file" accept=".json" @change="uploadJson" class="hidden"/>
+        </label>
         <button
           @click="downloadJson"
           class="ml-2 px-3 py-1 bg-blue-600 text-white rounded cursor-pointer"
@@ -217,6 +221,25 @@ function downloadJson() {
   a.download = selectedFile.value || "new-event.json"
   a.click()
   URL.revokeObjectURL(url)
+}
+
+function uploadJson(event) {
+  const file = event.target.files[0]
+  if (file) {
+    const reader = new FileReader()
+    reader.onload = (e) => {
+      try {
+        jsonData.value = JSON.parse(e.target.result)
+        selectedFile.value = file.name
+        document.getElementById("jsonFile").textContent = file.name
+        // Reset file input
+        event.target.value = ""
+      } catch {
+        alert("Invalid JSON file")
+      }
+    }
+    reader.readAsText(file)
+  }
 }
 
 // Auto-load first file
