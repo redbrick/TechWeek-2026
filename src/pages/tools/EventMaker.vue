@@ -249,7 +249,3 @@ function uploadJson(event) {
 // Auto-load first file
 if (!jsonData.value) loadJson()
 </script>
-
-<style scoped>
-/* Add your styles here */
-</style>
