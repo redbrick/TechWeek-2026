@@ -3,7 +3,7 @@
     <iframe
       v-if="urlID"
       class="aspect-video w-full rounded-lg"
-      :src="`https://www.youtube.com/embed/${urlID}`"
+      :src="`${urlID}`"
       title="YouTube video player"
       frameborder="0"
       allow="
