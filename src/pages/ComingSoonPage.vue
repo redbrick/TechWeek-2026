@@ -34,10 +34,10 @@
       <p class="mx-auto mt-3 max-w-[44ch] text-[0.98rem] text-[#a9b4c7]">
         Talk submissions:
         <a
-          href="mailto:committee@redbrick.dcu.ie"
+          href="mailto:techweek@redbrick.dcu.ie"
           class="font-semibold text-[#e63946] underline decoration-[#ffd166]/70 underline-offset-2 hover:text-[#ffd166]"
         >
-          committee@redbrick.dcu.ie
+          techweek@redbrick.dcu.ie
         </a>
       </p>
     </div>
