@@ -22,10 +22,11 @@ const selectedTab = ref(0)
           :key="tab.label"
           @click="selectedTab = idx"
           :class="[
-            'py-1 px-1 font-semibold focus:outline-none transition-colors duration-200 cursor-pointer',
+            'py-1 px-1 font-semibold transition-colors duration-200 cursor-pointer',
             'rounded-t-lg',
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:border-blue-400',
             selectedTab === idx
-              ? 'bg-blue-100 dark:bg-blue-900 border-b-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400'
+              ? 'bg-blue-100 dark:bg-[#001460] border-b-2 border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400'
               : 'bg-gray-100 dark:bg-gray-800 text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400',
           ]"
           type="button"
