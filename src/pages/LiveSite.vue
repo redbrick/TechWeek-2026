@@ -24,7 +24,7 @@ async function loadData() {
   try {
     data.value = (await import(`../data/${year.value}.json`)).default
   } catch {
-    data.value = (await import("../data/2014.json")).default
+    data.value = (await import("../data/2017.json")).default
   }
 }
 
@@ -52,6 +52,10 @@ const calendarTabs = computed(() => {
 })
 
 defineExpose({ data, calendarTabs, subtitle })
+
+watchEffect(() => {
+  document.title = `Tech Week ${data.value.year} - ${data.value ? data.value.location : ""}`
+})
 </script>
 
 <template>

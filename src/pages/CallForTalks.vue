@@ -3,6 +3,8 @@ import ThemeToggle from "../components/ThemeToggle.vue"
 import TitleBlock from "..//components/TitleBlock.vue"
 import FooterRedbrick from "../components/FooterRedbrick.vue"
 import redbrickLogo from "../assets/redbrick.svg"
+
+document.title = "Call for Talks - Tech Week 2026"
 </script>
 
 <template>
