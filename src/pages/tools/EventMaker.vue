@@ -4,7 +4,11 @@
       <h1 class="text-2xl font-bold mb-4">Event JSON Editor</h1>
       <div class="mb-4 flex flex-wrap gap-2 items-center">
         <span class="font-semibold">Select year:</span>
-        <select v-model="selectedFile" @change="loadJson" class="border rounded px-2 py-1 bg-gray-900">
+        <select
+          v-model="selectedFile"
+          @change="loadJson"
+          class="border rounded px-2 py-1 bg-gray-900"
+        >
           <option v-for="file in jsonFiles" :key="file" :value="file">{{ file }}</option>
         </select>
         <button
@@ -15,7 +19,7 @@
         </button>
         <label class="ml-2 px-3 py-1 bg-gray-700 text-white rounded cursor-pointer">
           <span id="jsonFile">Upload JSON</span>
-          <input type="file" accept=".json" @change="uploadJson" class="hidden"/>
+          <input type="file" accept=".json" @change="uploadJson" class="hidden" />
         </label>
         <button
           @click="downloadJson"
