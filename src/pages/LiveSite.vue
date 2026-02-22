@@ -54,7 +54,7 @@ const calendarTabs = computed(() => {
 defineExpose({ data, calendarTabs, subtitle })
 
 watchEffect(() => {
-  document.title = `Tech Week ${data.value.year} - ${data.value ? data.value.location : ""}`
+  document.title = `Tech Week ${data.value ? data.value.year : ""} - ${data.value ? data.value.location : ""}`
 })
 </script>
 
