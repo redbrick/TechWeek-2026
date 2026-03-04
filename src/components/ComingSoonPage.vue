@@ -29,7 +29,7 @@
         and launch details.
       </p>
       <p class="mt-5 text-[0.95rem] font-semibold uppercase tracking-[0.08em] text-[#dbe6ff]">
-        22 March to 27 March 2026
+        23 March to 27 March 2026
       </p>
       <p class="mx-auto mt-3 max-w-[44ch] text-[0.98rem] text-[#a9b4c7]">
         Talk submissions:
