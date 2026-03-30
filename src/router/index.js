@@ -19,12 +19,12 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, from, next) => {
-  if (isDevEnabled && to.path !== "/soon") {
-    next("/soon")
-  } else {
-    next()
+router.beforeEach((to) => {
+  if (isDevEnabled) {
+    return to.path === "/soon" ? true : "/soon"
   }
+
+  return to.path === "/soon" ? "/" : true
 })
 
 export default router

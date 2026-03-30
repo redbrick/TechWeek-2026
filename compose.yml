@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        VITE_DEV: true
+        VITE_DEV: false
     ports:
       - "8080:80"
     restart: unless-stopped
