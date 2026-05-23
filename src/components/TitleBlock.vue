@@ -13,10 +13,10 @@ const router = useRouter()
 const route = useRoute()
 
 const props = defineProps({
-  title: { type: String, default: 'Tech Week' },
-  subtitle: { type: String, default: '' },
-  bg: { type: String, default: 'bg-red-600' },
-  text: { type: String, default: 'text-red-600' },
+  title: { type: String, default: "Tech Week" },
+  subtitle: { type: String, default: "" },
+  bg: { type: String, default: "bg-red-600" },
+  text: { type: String, default: "text-red-600" },
 })
 
 function goToYear(year) {
