@@ -62,7 +62,7 @@ watchEffect(() => {
   <div class="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
     <header class="w-full">
       <ThemeToggle class="float-right" />
-      <TitleBlock :title="data?.event ?? 'Tech Week'" :subtitle="subtitle" />
+      <TitleBlock :title="data?.event ?? 'Tech Week'" :subtitle="subtitle" :bg="data?.bg ?? 'bg-red-600'" :text="data?.text ?? 'text-red-600'"/>
     </header>
 
     <main class="grid grid-cols-1 items-start gap-6 lg:grid-cols-12">

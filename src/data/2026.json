@@ -8,6 +8,8 @@
   "live": "2026-03-23T12:00:00",
   "archive": "true",
   "cover": "https://cdn.redbrick.dcu.ie/techweek/static/img/stemweek.jpg",
+  "bg": "bg-blue-600",
+  "text": "text-blue-600",
   "days": [
     {
       "day": "Monday 23rd",

@@ -82,6 +82,14 @@
             <label class="block font-semibold">Cover (Youtube or Image)</label>
             <input v-model="jsonData.cover" class="border rounded px-2 py-1 w-full" />
           </div>
+          <div class="mb-2">
+            <label class="block font-semibold">Background Colour (Need to be tailwind class i.e bg-red-600)</label>
+            <input v-model="jsonData.bg" class="border rounded px-2 py-1 w-full" />
+          </div>
+          <div class="mb-2">
+            <label class="block font-semibold">Text color (Need to be tailwind class i.e text-red-600)</label>
+            <input v-model="jsonData.text" class="border rounded px-2 py-1 w-full" />
+          </div>
           <div class="mb-4">
             <label class="block font-semibold">Days & Events</label>
             <div v-for="(day, dIdx) in jsonData.days" :key="dIdx" class="border rounded p-2 mb-2">
