@@ -1,7 +1,7 @@
 <script setup>
 import CalendarMain from "../components/CalendarMain.vue"
 import TitleBlock from "../components/TitleBlock.vue"
-import YoutubeEmbed from "../components/YoutubeEmbed.vue"
+import CoverEmbed from "../components/CoverEmbed.vue"
 import ThemeToggle from "../components/ThemeToggle.vue"
 import FooterRedbrick from "../components/FooterRedbrick.vue"
 
@@ -54,7 +54,7 @@ const calendarTabs = computed(() => {
 defineExpose({ data, calendarTabs, subtitle })
 
 watchEffect(() => {
-  document.title = `Tech Week ${data.value ? data.value.year : ""} - ${data.value ? data.value.location : ""}`
+  document.title = `${data.value ? data.value.event : "Tech Week"} ${data.value ? data.value.year : ""} - ${data.value ? data.value.location : ""}`
 })
 </script>
 
@@ -62,12 +62,12 @@ watchEffect(() => {
   <div class="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
     <header class="w-full">
       <ThemeToggle class="float-right" />
-      <TitleBlock :title="'Tech Week'" :subtitle="subtitle" />
+      <TitleBlock :title="data?.event ?? 'Tech Week'" :subtitle="subtitle" />
     </header>
 
     <main class="grid grid-cols-1 items-start gap-6 lg:grid-cols-12">
       <section class="lg:col-span-5">
-        <YoutubeEmbed :urlID="data && data.video ? data.video : ''" />
+        <CoverEmbed :urlID="data && data.cover ? data.cover : ''" />
       </section>
 
       <section class="lg:col-span-7">

@@ -37,6 +37,10 @@
             <input v-model="jsonData.title" class="border rounded px-2 py-1 w-full" />
           </div>
           <div class="mb-2">
+            <label class="block font-semibold">Event</label>
+            <input v-model="jsonData.event" class="border rounded px-2 py-1 w-full" />
+          </div>
+          <div class="mb-2">
             <label class="block font-semibold">Location</label>
             <input v-model="jsonData.location" class="border rounded px-2 py-1 w-full" />
           </div>
@@ -75,8 +79,8 @@
             <input v-model="jsonData.live" class="border rounded px-2 py-1 w-full" />
           </div>
           <div class="mb-2">
-            <label class="block font-semibold">Video</label>
-            <input v-model="jsonData.video" class="border rounded px-2 py-1 w-full" />
+            <label class="block font-semibold">Cover (Youtube or Image)</label>
+            <input v-model="jsonData.cover" class="border rounded px-2 py-1 w-full" />
           </div>
           <div class="mb-4">
             <label class="block font-semibold">Days & Events</label>
