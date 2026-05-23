@@ -170,7 +170,7 @@
 <script setup>
 import { ref } from "vue"
 
-const jsonFiles = ["2014.json", "2015.json", "2016.json", "2017.json"]
+const jsonFiles = ["2014.json", "2015.json", "2016.json", "2017.json", "2026.json"]
 const selectedFile = ref("2014.json")
 const jsonData = ref(null)
 
