@@ -37,6 +37,10 @@
             <input v-model="jsonData.title" class="border rounded px-2 py-1 w-full" />
           </div>
           <div class="mb-2">
+            <label class="block font-semibold">Event</label>
+            <input v-model="jsonData.event" class="border rounded px-2 py-1 w-full" />
+          </div>
+          <div class="mb-2">
             <label class="block font-semibold">Location</label>
             <input v-model="jsonData.location" class="border rounded px-2 py-1 w-full" />
           </div>
@@ -75,8 +79,20 @@
             <input v-model="jsonData.live" class="border rounded px-2 py-1 w-full" />
           </div>
           <div class="mb-2">
-            <label class="block font-semibold">Video</label>
-            <input v-model="jsonData.video" class="border rounded px-2 py-1 w-full" />
+            <label class="block font-semibold">Cover (Youtube or Image)</label>
+            <input v-model="jsonData.cover" class="border rounded px-2 py-1 w-full" />
+          </div>
+          <div class="mb-2">
+            <label class="block font-semibold"
+              >Background Colour (Need to be tailwind class i.e bg-red-600)</label
+            >
+            <input v-model="jsonData.bg" class="border rounded px-2 py-1 w-full" />
+          </div>
+          <div class="mb-2">
+            <label class="block font-semibold"
+              >Text color (Need to be tailwind class i.e text-red-600)</label
+            >
+            <input v-model="jsonData.text" class="border rounded px-2 py-1 w-full" />
           </div>
           <div class="mb-4">
             <label class="block font-semibold">Days & Events</label>
@@ -166,7 +182,7 @@
 <script setup>
 import { ref } from "vue"
 
-const jsonFiles = ["2014.json", "2015.json", "2016.json", "2017.json"]
+const jsonFiles = ["2014.json", "2015.json", "2016.json", "2017.json", "2026.json"]
 const selectedFile = ref("2014.json")
 const jsonData = ref(null)
 

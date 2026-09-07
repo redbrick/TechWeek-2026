@@ -1,0 +1,226 @@
+{
+  "title": "2026",
+  "location": "Dublin City University",
+  "start": 23,
+  "end": 27,
+  "month": "March",
+  "year": 2026,
+  "live": "2026-03-23T12:00:00",
+  "archive": "true",
+  "cover": "https://cdn.redbrick.dcu.ie/techweek/static/img/stemweek.jpg",
+  "bg": "bg-blue-600",
+  "text": "text-blue-600",
+  "days": [
+    {
+      "day": "Monday 23rd",
+      "description": "",
+      "events": [
+        {
+          "name": "Coffee Morning",
+          "by": "DCU Student's Union",
+          "time": "11:00",
+          "place": {
+            "id": "Cuilin in the U",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Kick off this exciting week in a cosy space to relax, chat, and connect with fellow STEM students. Tea, coffee, and light snacks will be provided!"
+        },
+        {
+          "name": "Ten Cool Technologies Before Redbrick",
+          "by": "Valen (John Looney)",
+          "time": "11:00",
+          "place": {
+            "id": "L129",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Discover fascinating technologies and innovations that shaped the world before Redbrick."
+        },
+        {
+          "name": "Bias in AI",
+          "by": "Suzanne Little",
+          "time": "12:00",
+          "place": {
+            "id": "L129",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore how bias appears in artificial intelligence and why it matters."
+        },
+        {
+          "name": "Egg Drop Challenge",
+          "by": "Engineering Society",
+          "time": "18:00",
+          "place": {
+            "id": "SA217",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Put your engineering skills to the test by designing a structure to protect your egg from impact. Pizza will be provided!"
+        },
+        {
+          "name": "Astro-Photography Exhibition",
+          "by": "Space & Robotics Club",
+          "time": "All Day",
+          "place": {
+            "id": "O’Reilly Library",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore a stunning showcase of astrophotography featuring incredible images captured by students."
+        }
+      ]
+    },
+    {
+      "day": "Tuesday 24rd",
+      "description": "",
+      "events": [
+        {
+          "name": "Geometry of Origami",
+          "by": "DCU Student's Union",
+          "time": "13:00",
+          "place": {
+            "id": "X101",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore the connection between maths and art through hands-on origami."
+        },
+        {
+          "name": "Astro-Photography Exhibition",
+          "by": "Space & Robotics Club",
+          "time": "All Day",
+          "place": {
+            "id": "O’Reilly Library",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore a stunning showcase of astrophotography featuring incredible images captured by students."
+        }
+      ]
+    },
+    {
+      "day": "Wednesday 25th",
+      "description": "",
+      "events": [
+        {
+          "name": "MSD Info Stand",
+          "by": "DCU Student's Union",
+          "time": "12:00",
+          "place": {
+            "id": "The Street, The U Building",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Calling all Science and Engineering students! MSD (Merck Sharp & Dohme) will be on campus to promote their Internship and Graduate Programmes 2027, opening this September. Drop by their Information Stand to ask questions and learn more about careers in the healthcare and pharmaceutical sector."
+        },
+        {
+          "name": "Bpuzzled",
+          "by": "Bloomberg",
+          "time": "14:30",
+          "place": {
+            "id": "L101",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Join the interactive Bpuzzled competition where teams of up to four use creativity and teamwork to solve logic puzzles themed around cities across the world! Pizza will be provided!"
+        },
+        {
+          "name": "Pastel Northern Lights",
+          "by": "DCU Arts & Crafts",
+          "time": "18:00",
+          "place": {
+            "id": "FTG09",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Unwind with a calming art session inspired by the colours of the Northern Lights.Tea, coffee, and light snacks will be provided!"
+        },
+        {
+          "name": "Astro-Photography Exhibition",
+          "by": "Space & Robotics Club",
+          "time": "All Day",
+          "place": {
+            "id": "O’Reilly Library",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore a stunning showcase of astrophotography featuring incredible images captured by students."
+        }
+      ]
+    },
+    {
+      "day": "Thursday 26th",
+      "description": "",
+      "events": [
+        {
+          "name": "Computer Assisted Learning",
+          "by": "Monica Ward",
+          "time": "12:00",
+          "place": {
+            "id": "L128",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Learn how technology is transforming education and learning experiences."
+        },
+        {
+          "name": "Large Scale DevOps",
+          "by": "Aidan Dempsey",
+          "time": "14:00",
+          "place": {
+            "id": "L114",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Get insights into managing and scaling development operations in tech."
+        },
+        {
+          "name": "Telescope + Astro-Photography Talk",
+          "by": "DCU Space & Robotics Club",
+          "time": "16:00",
+          "place": {
+            "id": "SA101",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Dive into astrophotography and experience observing the night sky through a telescope. Pizza will be provided!"
+        },
+        {
+          "name": "Pub Quiz",
+          "by": "DCU Student's Union",
+          "time": "18:00",
+          "place": {
+            "id": "Nubar",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Bring your friends along for a fun and social STEM themed quiz night packed with questions and prizes with chances to win vouchers from Lidl, Dunnes Stores and many more."
+        },
+        {
+          "name": "Astro-Photography Exhibition",
+          "by": "Space & Robotics Club",
+          "time": "All Day",
+          "place": {
+            "id": "O’Reilly Library",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore a stunning showcase of astrophotography featuring incredible images captured by students."
+        }
+      ]
+    },
+    {
+      "day": "Friday 27th",
+      "description": "",
+      "events": [
+        {
+          "name": "Bridge Building",
+          "by": "DCU Engineering Society & DCU Women in STEM",
+          "time": "13:00",
+          "place": {
+            "id": "SAG08",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Work in teams to design and build a strong bridge in this hands-on engineering challenge."
+        },
+        {
+          "name": "Astro-Photography Exhibition",
+          "by": "Space & Robotics Club",
+          "time": "All Day",
+          "place": {
+            "id": "O’Reilly Library",
+            "map": "Somewhere in DCU"
+          },
+          "description": "Explore a stunning showcase of astrophotography featuring incredible images captured by students."
+        }
+      ]
+    }
+  ],
+  "event": "Stem++ Week"
+}

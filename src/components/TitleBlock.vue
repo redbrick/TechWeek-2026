@@ -13,8 +13,10 @@ const router = useRouter()
 const route = useRoute()
 
 const props = defineProps({
-  title: String,
-  subtitle: String,
+  title: { type: String, default: "Tech Week" },
+  subtitle: { type: String, default: "" },
+  bg: { type: String, default: "bg-red-600" },
+  text: { type: String, default: "text-red-600" },
 })
 
 function goToYear(year) {
@@ -27,14 +29,15 @@ function goToCallForTalks() {
 </script>
 
 <template>
-  <div class="wrapper flex flex-col bg-red-600 text-white p-8 rounded-lg shadow-lg mt-8">
+  <div class="wrapper flex flex-col text-white p-8 rounded-lg shadow-lg mt-8" :class="[props.bg]">
     <h1 class="text-4xl font-bold mb-2">{{ props.title }}</h1>
     <p class="text-lg mb-0">{{ props.subtitle }}</p>
     <div class="mt-4 flex gap-2 flex-wrap">
       <span v-for="year in years" :key="year">
         <button
           :class="[
-            'bg-white text-red-600 font-semibold px-3 py-1 rounded hover:bg-red-100 transition cursor-pointer',
+            'bg-white font-semibold px-3 py-1 rounded hover:bg-red-100 transition cursor-pointer',
+            props.text,
             route.path === '/' + year ? 'ring-2 ring-blue-400 bg-blue-50' : '',
           ]"
           @click="goToYear(year)"
@@ -44,7 +47,8 @@ function goToCallForTalks() {
       </span>
       <button
         :class="[
-          'bg-white text-red-600 font-semibold px-3 py-1 rounded hover:bg-red-100 transition cursor-pointer',
+          'bg-white font-semibold px-3 py-1 rounded hover:bg-red-100 transition cursor-pointer',
+          props.text,
           route.path === '/cft' ? 'ring-2 ring-blue-400 bg-blue-50' : '',
         ]"
         @click="goToCallForTalks"
